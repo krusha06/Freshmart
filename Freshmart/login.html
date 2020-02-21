@@ -1,0 +1,77 @@
+<html>
+<head>
+<title>login</title>
+<link rel="stylesheet" href="design.css" type="text/css">
+<script>
+	function validation(){
+		var h=/^[a-zA-Z0-9]+\@[a-zA-Z0-9]+\.[a-zA-Z]{2,4}$/;
+		var c=document.getElementById("email").value;
+		if(c==""){
+			document.getElementById("errmsg1").innerHTML="please enter email";
+		document.getElementById("email").focus();
+		return false;	
+		}
+		if(h.test(c)==false)
+		{
+		document.getElementById("errmsg1").innerHTML="please enter valid email";
+		document.getElementById("email").focus();
+		return false;
+		}
+		var d=document.getElementById("password").value;
+		if(d==""){
+		document.getElementById("errmsg1").innerHTML="please enter password";
+		document.getElementById("password").focus();
+		return false;				
+		}
+		else
+		{
+			document.f1.submit();
+		}
+	}
+</script>
+</head>
+<body>
+	<table width="100%" height="20%">
+	<tr height="50%">
+		<td width="40%" height="50%"> <img src="logo.png" height="120%" width="30%">  </td>
+		<td height=""50%><br><br>
+		<table align="right" width="130%" height="50%">
+		<tr>
+			<td colspan="2" class="color">
+					<ul>
+  						<li><a href="home.html">Home</a></li>
+  						<li><a href="login.html" class="active">Login</a></li>
+ 						<li><a href="signup.html">Signup</a></li>
+                        <li><a href="About us.htm">About us</a></li>
+                        <li class="dropdown"><a href="#"class="dropbtn">Products</a>
+                        	<div class="dropdown-content">
+      								<a href="Fruits.html">Fruits</a>
+     								 <a href="Vegetables.html">Vegetables</a>
+    								  <a href="Dairy Products.html">Dairy Products</a>
+   						 </div>
+                        </li>
+						 <li><a href="Reviews.html">Reviews</a></li>
+                     
+					</ul>
+                   </td>
+        </tr>
+			</table>
+		</td>
+	</tr>
+	<tr> 
+		<td align="center" colspan="2"><br><br><h1>Sign In</h1><br>
+		<form name="f1" method="post" action="myaccount.html" align="center">
+		<span id="errmsg1" style="align-content:left;font-size:15pt;color:yellow"></span><br>
+		<input type="text" placeholder="Enter your Email" style="font-size:15pt;width:400" id="email"><br><br>
+		<input type="password" placeholder="Enter Password" style="font-size:15pt;width:400" id="password"><br><br><br>
+		<input type="button" value="Login" style="font-size:20pt;color:black;background-color:#FFCC33;border:1px;cursor:pointer" 
+		onclick="Javascript:validation();">
+		</form>
+		<p align="center">
+			Don't have an account? &nbsp;<a href="signup.html" style="color:#FFCC33">Sign Up</a>
+		</p>
+		</td>
+	</tr>
+</table>
+</body>
+</html>
